@@ -1,0 +1,184 @@
+/* Import Fonts (optional if not in HTML) */
+@import url('https://fonts.googleapis.com/css2?family=Momo+Signature&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: "Open Sans", sans-serif;
+    background-color: #6f88a0;
+
+    color: #333;
+}
+
+/* Navbar Styling */
+nav {
+    display: flex;
+    justify-content: space-between;
+    /* space between title, links, and logo */
+    align-items: center;
+    background-color: #222831;
+    color: #fff;
+    padding: 15px 50px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Title (Text Tracker) */
+nav h1 {
+    font-family: "Momo Signature", cursive;
+    font-size: 32px;
+    font-weight: 500;
+    color: #00adb5;
+    letter-spacing: 1px;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.nav-links li {
+    cursor: pointer;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links li:hover {
+    color: #00adb5;
+}
+
+/* Logo Styling */
+.nav-logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    /* square with rounded corners */
+    object-fit: cover;
+    border: 2px solid #00adb5;
+}
+
+/* Task Box Styling */
+.task-box {
+    background-color: #ffffff;
+    width: 350px;
+    height: 450px;
+    margin: 80px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;              /* enable flexbox */
+    flex-direction: column;     /* stack items vertically */
+    align-items: center;        /* horizontally center elements */
+    justify-content: flex-start;/* align all content at the top */
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+/* Container for all task boxes */
+.task-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* exactly 3 boxes per row */
+    justify-items: center;
+    /* center each box horizontally */
+    align-items: start;
+    /* align boxes from top */
+}
+
+
+
+.task-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.task-box h2 {
+    font-family: "Momo Signature", cursive;
+    color: #00adb5;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.task-box input {
+    width: 80%;
+    padding: 10px;
+    border: 2px solid #00adb5;
+    border-radius: 8px;
+    outline: none;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+#task-detail {
+    width: 80%;
+    height: 35%;
+    padding: 10px;
+    border: 2px solid #00adb5;
+    border-radius: 8px;
+    outline: none;
+    font-size: 16px;
+    margin-bottom: 15px;          /* prevent manual resizing */
+    font-family: "Open Sans", sans-serif;
+    resize: none;
+    text-align: left;          /* make sure text aligns to left */
+    vertical-align: top;       /* ensures text starts from top */
+}
+
+
+.task-box input:focus {
+    border-color: #007b83;
+}
+
+.task-box button {
+    background-color: #00adb5;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+.task-box button:hover {
+    background-color: #007b83;
+}
+
+.task-box-display {
+  background-color: #ffffff;
+  width: 350px;
+  height: 450px;
+  padding: 20px;
+  margin: 80px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.task-box-display:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.task-box-display h2 {
+  font-family: "Momo Signature", cursive;
+  color: #00adb5;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.task-box-display p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  color: #333;
+  text-align: left;
+  white-space: pre-wrap; /* keep line breaks from textarea */
+}
